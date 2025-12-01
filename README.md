@@ -425,7 +425,7 @@ Body (raw JSON):
 }
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -455,7 +455,7 @@ To create an admin user, you can:
 
 2. Or modify the registration endpoint to allow admin creation (not recommended for production without additional security)
 
-## 📝 Code Structure
+## Code Structure
 
 ### Middleware Flow
 
@@ -484,7 +484,7 @@ Business logic is separated into services:
 
 All inputs are validated using Joi schemas in `utils/validators.js`. Validation happens in controllers before processing.
 
-## 🚨 Error Handling
+## Error Handling
 
 All errors are caught and formatted consistently:
 
@@ -514,22 +514,19 @@ All errors are caught and formatted consistently:
 - **express-rate-limit**: Rate limiting
 - **express-mongo-sanitize**: MongoDB injection protection
 
-## 🔄 Token Flow
+## Token Flow
 
 1. **Login/Register**: User receives both `accessToken` and `refreshToken`
 2. **Access Protected Routes**: Use `accessToken` in Authorization header
 3. **Token Expires**: When `accessToken` expires, use `refreshToken` to get new `accessToken`
 4. **Logout**: Clears `refreshToken` from database
 
-## 📄 License
 
-MIT
-
-## 🤝 Contributing
+## Contributing
 
 Feel free to submit issues and enhancement requests!
 
-## 📧 Support
+## Support
 
 For issues and questions, please open an issue on the repository.
 
